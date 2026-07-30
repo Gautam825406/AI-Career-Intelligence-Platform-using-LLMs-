@@ -1,0 +1,95 @@
+{
+  "analysis_id": "b3f1a2e4-9c8d-4e2a-8f1a-6d3b9c2e7a10",
+  "course_summary": "This course teaches full-stack web fundamentals: HTML/CSS/JavaScript, Git, building REST APIs with Node.js and Express, basic SQL with PostgreSQL, authentication, and deployment.",
+  "readiness_score": 58,
+  "readiness_explanation": "The syllabus directly covers REST API construction, SQL basics, and authentication, which are core backend skills. It scores in the middle range because it does not cover testing, caching, or system design, which most backend roles also expect.",
+  "matched_skills": [
+    {
+      "skill": "REST API design",
+      "syllabus_evidence": "Week 9-10: Building RESTful APIs with Node.js and Express, including routing, middleware, and JSON request/response handling",
+      "career_relevance": "Backend developers spend most of their time designing and maintaining REST APIs."
+    },
+    {
+      "skill": "Relational databases and SQL",
+      "syllabus_evidence": "Week 11: Introduction to relational databases and SQL - basic CRUD operations using PostgreSQL",
+      "career_relevance": "Nearly every backend service reads from and writes to a relational database."
+    },
+    {
+      "skill": "Authentication fundamentals",
+      "syllabus_evidence": "Week 12: Authentication basics - sessions, cookies, and JSON Web Tokens",
+      "career_relevance": "Backend developers are commonly responsible for securing endpoints and managing user sessions."
+    }
+  ],
+  "skill_gaps": [
+    {
+      "skill": "Automated testing",
+      "importance": "Backend teams expect unit and integration tests before code ships to production.",
+      "priority": "high",
+      "next_step": "Learn a testing framework (e.g. Jest for Node.js) and write tests for one existing API route."
+    },
+    {
+      "skill": "API documentation and contracts",
+      "importance": "Teams rely on clear API contracts (e.g. OpenAPI/Swagger) to integrate frontend and backend work.",
+      "priority": "medium",
+      "next_step": "Add OpenAPI/Swagger docs to the syllabus's final CRUD project."
+    }
+  ],
+  "project_recommendations": [
+    {
+      "title": "Tested Task-Tracker API",
+      "outcome": "A small REST API (tasks/users) with full CRUD, JWT authentication, and an automated test suite.",
+      "mapped_skills": ["REST API design", "Relational databases and SQL", "Authentication fundamentals", "Automated testing"],
+      "difficulty": "intermediate",
+      "success_criteria": "All endpoints are covered by passing automated tests, and the repo README documents each route."
+    },
+    {
+      "title": "Documented Public API",
+      "outcome": "The same API extended with OpenAPI/Swagger documentation and a hosted interactive docs page.",
+      "mapped_skills": ["API documentation and contracts", "REST API design"],
+      "difficulty": "beginner",
+      "success_criteria": "A visitor can read the Swagger UI and successfully call every endpoint without reading the source code."
+    }
+  ],
+  "learning_plan": [
+    {
+      "week_number": 1,
+      "focus": "Testing fundamentals",
+      "tasks": ["Learn Jest basics", "Write tests for 3 existing routes from the final project"],
+      "estimated_hours": 10
+    },
+    {
+      "week_number": 2,
+      "focus": "Expand the API",
+      "tasks": ["Add JWT-protected routes", "Add input validation middleware"],
+      "estimated_hours": 10
+    },
+    {
+      "week_number": 3,
+      "focus": "Documentation",
+      "tasks": ["Add OpenAPI spec", "Host interactive Swagger docs"],
+      "estimated_hours": 10
+    },
+    {
+      "week_number": 4,
+      "focus": "Polish and deploy",
+      "tasks": ["Deploy final version", "Write a project README with setup instructions"],
+      "estimated_hours": 10
+    }
+  ],
+  "assumptions": [
+    "Assumed the student already has the Node.js/Express project from Week 9-14 available to extend, since the syllabus does not specify project retention."
+  ],
+  "warnings": [
+    "Syllabus does not mention a specific testing framework, so the recommendation defaults to Jest, a common choice for Node.js."
+  ],
+  "usage": {
+    "provider_model": "gpt-5-nano",
+    "input_tokens": 612,
+    "output_tokens": 540,
+    "total_tokens": 1152
+  },
+  "meta": {
+    "request_id": "7c9e6c1a-1b2d-4a3e-9f4d-2e8b6a1c3d5f",
+    "processing_time_ms": 1840.32
+  }
+}

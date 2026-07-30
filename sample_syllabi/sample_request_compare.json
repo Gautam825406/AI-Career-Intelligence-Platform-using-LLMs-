@@ -1,0 +1,9 @@
+{
+  "course_name": "Foundations of Data Analytics",
+  "syllabus_text": "Week 1: Introduction to data analytics - the analytics lifecycle, types of data, and common business use cases. Week 2: Excel and spreadsheet-based analysis - pivot tables, VLOOKUP, and basic charting for exploratory data analysis. Week 3: Introduction to SQL - SELECT statements, WHERE filtering, GROUP BY, and JOIN operations across multiple tables. Week 4: Data cleaning principles - handling missing values, duplicates, and inconsistent formatting in real-world datasets. Week 5: Introduction to Python for data analysis using pandas - reading CSV files, filtering rows, and creating summary statistics. Week 6: Data visualization principles - choosing the right chart type, avoiding misleading visuals, and building dashboards in Tableau. Week 7: Descriptive statistics - mean, median, standard deviation, and correlation. Week 8: Introduction to A/B testing and basic hypothesis testing concepts. Week 9: Storytelling with data - structuring a data-driven presentation for a non-technical audience. Week 10: Capstone project - students analyze a provided retail sales dataset and present findings and recommendations to a mock stakeholder panel.",
+  "education_level": "undergraduate",
+  "study_hours_per_week": 6,
+  "plan_duration_weeks": 3,
+  "target_career_a": "Data Analyst",
+  "target_career_b": "Data Engineer"
+}

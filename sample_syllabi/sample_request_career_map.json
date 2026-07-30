@@ -1,0 +1,9 @@
+{
+  "course_name": "Introduction to Web Development",
+  "target_career": "Backend Developer",
+  "education_level": "undergraduate",
+  "syllabus_text": "Week 1-2: HTML fundamentals - semantic tags, forms, accessibility basics. Week 3-4: CSS fundamentals - box model, flexbox, responsive design with media queries. Week 5-6: JavaScript basics - variables, functions, DOM manipulation, event handling. Week 7-8: Introduction to version control with Git and GitHub, including branching and pull requests. Week 9-10: Building RESTful APIs with Node.js and Express, including routing, middleware, and JSON request/response handling. Week 11: Introduction to relational databases and SQL - basic CRUD operations using PostgreSQL. Week 12: Authentication basics - sessions, cookies, and JSON Web Tokens. Week 13: Deploying a full-stack application to a cloud hosting provider. Week 14: Final project - students build and deploy a full-stack CRUD application with a database-backed API and a simple frontend.",
+  "study_hours_per_week": 10,
+  "plan_duration_weeks": 4,
+  "known_skills": ["HTML", "CSS"]
+}

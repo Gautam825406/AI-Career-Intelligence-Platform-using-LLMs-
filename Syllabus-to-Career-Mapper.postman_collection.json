@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "Syllabus-to-Career Mapper",
+    "description": "FastAPI service that maps a course syllabus to a target career: matched skills, gaps, projects, and a week-by-week learning plan.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8000", "type": "string" }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{base_url}}/health", "host": ["{{base_url}}"], "path": ["health"] }
+      }
+    },
+    {
+      "name": "Create Career Map",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/career-map", "host": ["{{base_url}}"], "path": ["career-map"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"course_name\": \"Introduction to Web Development\",\n  \"target_career\": \"Backend Developer\",\n  \"education_level\": \"undergraduate\",\n  \"syllabus_text\": \"Week 1-2: HTML fundamentals - semantic tags, forms, accessibility basics. Week 3-4: CSS fundamentals - box model, flexbox, responsive design with media queries. Week 5-6: JavaScript basics - variables, functions, DOM manipulation, event handling. Week 7-8: Introduction to version control with Git and GitHub, including branching and pull requests. Week 9-10: Building RESTful APIs with Node.js and Express, including routing, middleware, and JSON request/response handling. Week 11: Introduction to relational databases and SQL - basic CRUD operations using PostgreSQL. Week 12: Authentication basics - sessions, cookies, and JSON Web Tokens. Week 13: Deploying a full-stack application to a cloud hosting provider. Week 14: Final project - students build and deploy a full-stack CRUD application with a database-backed API and a simple frontend.\",\n  \"study_hours_per_week\": 10,\n  \"plan_duration_weeks\": 4,\n  \"known_skills\": [\"HTML\", \"CSS\"]\n}"
+        }
+      }
+    },
+    {
+      "name": "Compare Two Careers",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/career-map/compare", "host": ["{{base_url}}"], "path": ["career-map", "compare"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"course_name\": \"Foundations of Data Analytics\",\n  \"syllabus_text\": \"Week 1: Introduction to data analytics - the analytics lifecycle, types of data, and common business use cases. Week 2: Excel and spreadsheet-based analysis - pivot tables, VLOOKUP, and basic charting for exploratory data analysis. Week 3: Introduction to SQL - SELECT statements, WHERE filtering, GROUP BY, and JOIN operations across multiple tables. Week 4: Data cleaning principles - handling missing values, duplicates, and inconsistent formatting in real-world datasets. Week 5: Introduction to Python for data analysis using pandas - reading CSV files, filtering rows, and creating summary statistics. Week 6: Data visualization principles - choosing the right chart type, avoiding misleading visuals, and building dashboards in Tableau. Week 7: Descriptive statistics - mean, median, standard deviation, and correlation. Week 8: Introduction to A/B testing and basic hypothesis testing concepts. Week 9: Storytelling with data - structuring a data-driven presentation for a non-technical audience. Week 10: Capstone project - students analyze a provided retail sales dataset and present findings and recommendations to a mock stakeholder panel.\",\n  \"education_level\": \"undergraduate\",\n  \"study_hours_per_week\": 6,\n  \"plan_duration_weeks\": 3,\n  \"target_career_a\": \"Data Analyst\",\n  \"target_career_b\": \"Data Engineer\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Invalid Request (422 example)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/career-map", "host": ["{{base_url}}"], "path": ["career-map"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"course_name\": \"AI\",\n  \"target_career\": \"Data Scientist\",\n  \"education_level\": \"undergraduate\",\n  \"syllabus_text\": \"too short\",\n  \"study_hours_per_week\": 10,\n  \"plan_duration_weeks\": 4\n}"
+        }
+      }
+    }
+  ]
+}
